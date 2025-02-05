@@ -16,10 +16,12 @@
         }
         .header {
             background: url('https://git242242.github.io/website/headerimage.png') no-repeat center center;
-            background-size: cover;
+            background-size: cover; /* Zorgt ervoor dat de afbeelding altijd de volledige breedte en hoogte vult */
             height: 300px;
             width: 100%;
             position: relative;
+            margin: 0; /* Verwijdert de rand */
+            padding: 0; /* Verwijdert de padding */
         }
         .main-title {
             font-size: 5rem;
@@ -43,6 +45,7 @@
         }
         .content {
             padding: 20px;
+            text-align: left; /* Zorgt ervoor dat tekst links wordt uitgelijnd */
         }
         .agenda, .past {
             text-align: left;
