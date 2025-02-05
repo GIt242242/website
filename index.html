@@ -43,23 +43,28 @@
             width: 100px;
             margin: 10px;
         }
-        /* Make the audio player responsive */
+        /* Compact audio player */
         .audio-player {
             width: 100%;
-            max-width: 100%; /* Adjusted to make the player fit */
+            max-width: 100%;
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
         }
         .audio-player iframe {
             width: 100%;
-            height: 40px; /* Adjusted height for compactness */
+            height: 40px;
             border: none;
         }
         .image-container {
             margin-top: 30px;
+            display: flex;
+            justify-content: center;
         }
         .image-container img {
             width: 100%;
             height: auto;
+            max-width: 400px; /* Past zich netjes aan, max 400px breed */
         }
     </style>
 </head>
@@ -85,20 +90,21 @@
                 </div>
                 <div class="col-md-6 past">
                     <h2>PAST:</h2>
-                    <p>Anla Courtis, Elko Bijweert, Ak’Chamel, W. Ravenveer, Mik Quantius, Bear Bones Lay Low, Bekkenbouwer, Bent von Bent, Weird Dust, Snobtrax, Pinchado, Jooklo Duo &gt;&gt;</p>
+                    <p>Anla Courtis & Elko Bijweert, Ak’Chamel, W. Ravenveer, Mik Quantius, Bear Bones Lay Low, Bekkenbouwer, Bent von Bent, Weird Dust, Snobtrax, Pinchado, Jooklo Duo &gt;&gt;</p>
                 </div>
             </div>
 
-            <!-- Audio player block -->
+            <!-- Gewisselde volgorde: foto links, audioplayer rechts -->
             <div class="row">
-                <div class="col-md-6 audio-player">
-                    <iframe src="https://audiomack.com/embed/242hz/song/anlaelko" scrolling="no" frameborder="0" title="ANLA COURTIS & ELKO BLIJWEERT LIVE 24/01"></iframe>
-                </div>
                 <div class="col-md-6 image-container">
                     <img src="jdbb.png" alt="JDBB" />
+                </div>
+                <div class="col-md-6 audio-player">
+                    <iframe src="https://audiomack.com/embed/242hz/song/anlaelko" scrolling="no" frameborder="0" title="ANLA COURTIS & ELKO BLIJWEERT LIVE 24/01"></iframe>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>
