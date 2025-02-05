@@ -19,18 +19,27 @@
             background-size: cover;
             height: 300px;
             width: 100%;
+            position: relative;
         }
         .main-title {
             font-size: 5rem;
             font-weight: bold;
             font-family: 'Staatliches', sans-serif;
             text-align: left;
-            margin-top: 20px;
+            margin-top: 0;
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
         }
         .subtitle {
             font-style: italic;
             font-size: 1.5rem;
             text-align: left;
+            position: absolute;
+            top: 70%;
+            left: 20px;
+            transform: translateY(-50%);
         }
         .content {
             padding: 20px;
@@ -47,21 +56,12 @@
 </head>
 <body>
 
-    <div class="header"></div>
-
-    <h1 class="main-title">242Hz</h1>
-    <p class="subtitle">Space for experimental sound/art</p>
-
-</body>
-</html>
-
-
-
-</head>
-<body>
-    <div class="container text-center mt-5">
-        <h1 class="main-title">242hz</h1>
+    <div class="header">
+        <h1 class="main-title">242Hz</h1>
         <p class="subtitle">Space for experimental sound/art</p>
+    </div>
+
+    <div class="container text-center mt-5">
         <div class="content">
             <p><em>At 242Hz, we host concerts featuring experimental, free-form music and sound/art performances. A non-profit DIY initiative in Antwerp (BE).</em></p>
             
@@ -85,5 +85,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
