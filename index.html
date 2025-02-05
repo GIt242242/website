@@ -15,7 +15,7 @@
             padding: 50px;
         }
         .header {
-            background: url('https://git242242.github.io/website/headerimage2.png') no-repeat center center;
+            background: url('https://git242242.github.io/website/headerimage.png') no-repeat center center;
             background-size: cover;
             height: 300px;
             width: 100%;
@@ -56,22 +56,25 @@
             margin: 10px;
         }
         .audio-player {
-            background-color: #333; /* Maak de achtergrond donkerder voor het audio blok */
+            background-color: #333;
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
         }
         .audio-block {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            margin-top: 30px;
         }
         .audio-block .audio-player {
-            flex: 1; /* Zorg ervoor dat de audioplayer de meeste ruimte inneemt */
-            margin-right: 20px;
+            margin-bottom: 20px;
+            width: 75%; /* Maak de audioplayer 25% kleiner */
+            align-self: center; /* Center de audioplayer */
         }
         .audio-block .image {
-            width: 200px; /* Pas de breedte van de afbeelding aan */
-            height: auto;
+            width: 100%;
+            max-width: 300px; /* Stel een max breedte in voor de afbeelding */
+            margin: 0 auto; /* Center de afbeelding */
             border-radius: 8px;
         }
     </style>
@@ -99,16 +102,16 @@
                     <p>Anla Courtis & Elko Bijweert, Ak’Chamel, W. Ravenveer, Mik Quantius, Bear Bones Lay Low, Bekkenbouwer, Bent von Bent, Weird Dust, Snobtrax, Pinchado, Jooklo Duo &gt;&gt;</p>
                 </div>
             </div>
-            
+
             <!-- Nieuwe sectie voor de audioplayer en foto -->
             <div class="audio-block">
                 <!-- Audio Player Block -->
                 <div class="audio-player">
                     <iframe src="https://audiomack.com/embed/242hz/song/anlaelko" scrolling="no" width="100%" height="252" frameborder="0" title="ANLA COURTIS & ELKO BLIJWEERT LIVE 24/01"></iframe>
                 </div>
-                <!-- Afbeelding Block -->
+                <!-- Afbeelding Block onder "Past" -->
                 <div class="image">
-                    <img src="your-image.jpg" alt="Your Image" class="img-fluid">
+                    <img src="jdbb.png" alt="JDBB Image" class="img-fluid">
                 </div>
             </div>
         </div>
