@@ -19,78 +19,61 @@
             background-size: cover;
             height: 300px;
             width: 100%;
-            position: relative;
-            margin: 0;
-            padding: 0;
         }
         .main-title {
             font-size: 5rem;
             font-weight: bold;
             font-family: 'Staatliches', sans-serif;
             text-align: left;
-            margin-top: 0;
-            position: absolute;
-            top: 50%;
-            left: 20px;
-            transform: translateY(-50%);
+            margin-top: 20px;
         }
         .subtitle {
             font-style: italic;
             font-size: 1.5rem;
             text-align: left;
-            position: absolute;
-            top: 70%;
-            left: 20px;
-            transform: translateY(-50%);
         }
         .content {
             padding: 20px;
-            text-align: left;
         }
         .agenda, .past {
             text-align: left;
             margin-top: 30px;
         }
+        .event-image {
+            width: 100px;
+            margin: 10px;
+        }
+        /* Make the audio player responsive */
         .audio-player {
-            background-color: #333;
-            padding: 0;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            width: 100%; /* Zorg ervoor dat het audio block de kolombreedte volgt */
-            border: none;
-        }
-        .audio-block {
-            display: flex;
-            flex-direction: row;
-            margin-top: 30px;
-        }
-        .audio-player-wrapper {
-            width: 50%; /* Exacte breedte van de agenda kolom */
+            width: 100%;
+            max-width: 90%; /* Adjust max-width to keep the player within the column */
+            margin-top: 20px;
         }
         .audio-player iframe {
-            width: 100%; /* Zorg ervoor dat de audioplayer zich aanpast aan de wrapper */
-            height: 50px; /* Kleinere hoogte voor het mini-speler effect */
-            border: none; /* Verwijder extra rand rondom de audioplayer */
-        }
-        .image-wrapper {
-            width: 50%; /* Zelfde breedte als de agenda kolom */
-            margin-left: 20px;
-        }
-        .image-wrapper img {
             width: 100%;
-            max-width: 300px; /* Stel een max breedte in voor de afbeelding */
-            border-radius: 8px;
+            height: 40px; /* Smaller height for a more compact player */
+            border: none;
+        }
+        .image-container {
+            margin-top: 30px;
+            max-width: 100%;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1 class="main-title">242Hz</h1>
-        <p class="subtitle">Space for experimental sound/art</p>
-    </div>
+    <div class="header"></div>
+
+    <h1 class="main-title">242Hz</h1>
+    <p class="subtitle">Space for experimental sound/art</p>
 
     <div class="container text-center mt-5">
+        <h1 class="main-title">242hz</h1>
+        <p class="subtitle">Space for experimental sound/art</p>
         <div class="content">
             <p><em>At 242Hz, we host concerts featuring experimental, free-form music and sound/art performances. A non-profit DIY initiative in Antwerp (BE).</em></p>
             
@@ -107,21 +90,16 @@
                 </div>
             </div>
 
-            <!-- Nieuwe sectie voor de audioplayer en foto -->
-            <div class="audio-block">
-                <!-- Audio Player Block -->
-                <div class="audio-player-wrapper">
-                    <div class="audio-player">
-                        <iframe src="https://audiomack.com/embed/242hz/song/anlaelko" scrolling="no" frameborder="0" title="ANLA COURTIS & ELKO BLIJWEERT LIVE 24/01"></iframe>
-                    </div>
+            <!-- Audio player block -->
+            <div class="row">
+                <div class="col-md-6 audio-player">
+                    <iframe src="https://audiomack.com/embed/242hz/song/anlaelko" scrolling="no" frameborder="0" title="ANLA COURTIS & ELKO BLIJWEERT LIVE 24/01"></iframe>
                 </div>
-                <!-- Afbeelding Block onder "Past" -->
-                <div class="image-wrapper">
-                    <img src="jdbb.png" alt="JDBB Image" class="img-fluid">
+                <div class="col-md-6 image-container">
+                    <img src="jdbb.png" alt="JDBB" />
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
