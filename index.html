@@ -56,23 +56,27 @@
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
+            width: 100%; /* Dit zorgt ervoor dat het audio block de kolombreedte volgt */
         }
         .audio-block {
             display: flex;
             flex-direction: row;
             margin-top: 30px;
         }
-        .audio-player {
-            width: 75%; /* Audioplayer 25% kleiner maken */
+        .audio-player-wrapper {
+            width: 50%; /* Exacte breedte van de agenda kolom */
         }
-        .audio-block .audio-player iframe {
-            width: 100%; /* Zorg ervoor dat de audioplayer zich aanpast */
+        .audio-player iframe {
+            width: 100%; /* Zorg ervoor dat de audioplayer zich aanpast aan de wrapper */
             height: 252px;
         }
-        .audio-block .image {
+        .image-wrapper {
+            width: 50%; /* Zelfde breedte als de agenda kolom */
+            margin-left: 20px;
+        }
+        .image-wrapper img {
             width: 100%;
             max-width: 300px; /* Stel een max breedte in voor de afbeelding */
-            margin-left: 20px;
             border-radius: 8px;
         }
     </style>
@@ -104,11 +108,13 @@
             <!-- Nieuwe sectie voor de audioplayer en foto -->
             <div class="audio-block">
                 <!-- Audio Player Block -->
-                <div class="audio-player">
-                    <iframe src="https://audiomack.com/embed/242hz/song/anlaelko" scrolling="no" frameborder="0" title="ANLA COURTIS & ELKO BLIJWEERT LIVE 24/01"></iframe>
+                <div class="audio-player-wrapper">
+                    <div class="audio-player">
+                        <iframe src="https://audiomack.com/embed/242hz/song/anlaelko" scrolling="no" frameborder="0" title="ANLA COURTIS & ELKO BLIJWEERT LIVE 24/01"></iframe>
+                    </div>
                 </div>
                 <!-- Afbeelding Block onder "Past" -->
-                <div class="image">
+                <div class="image-wrapper">
                     <img src="jdbb.png" alt="JDBB Image" class="img-fluid">
                 </div>
             </div>
