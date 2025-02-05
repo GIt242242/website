@@ -35,4 +35,85 @@
             transform: translateY(-50%);
         }
         .subtitle {
-       
+            font-style: italic;
+            font-size: 1.5rem;
+            text-align: left;
+            position: absolute;
+            top: 70%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+        .content {
+            padding: 20px;
+            text-align: left;
+        }
+        .agenda, .past {
+            text-align: left;
+            margin-top: 30px;
+        }
+        .audio-player {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .audio-block {
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px;
+        }
+        .audio-player {
+            width: 75%; /* Audioplayer 25% kleiner maken */
+        }
+        .audio-block .audio-player iframe {
+            width: 100%; /* Zorg ervoor dat de audioplayer zich aanpast */
+            height: 252px;
+        }
+        .audio-block .image {
+            width: 100%;
+            max-width: 300px; /* Stel een max breedte in voor de afbeelding */
+            margin-left: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1 class="main-title">242Hz</h1>
+        <p class="subtitle">Space for experimental sound/art</p>
+    </div>
+
+    <div class="container text-center mt-5">
+        <div class="content">
+            <p><em>At 242Hz, we host concerts featuring experimental, free-form music and sound/art performances. A non-profit DIY initiative in Antwerp (BE).</em></p>
+            
+            <div class="row">
+                <div class="col-md-6 agenda">
+                    <h2>AGENDA:</h2>
+                    <p>No events planned.</p>
+                    <p>Check Instagram for updates: <strong>@242hz</strong></p>
+                    <p>Mail us: 242hz at gmail dot com</p>
+                </div>
+                <div class="col-md-6 past">
+                    <h2>PAST:</h2>
+                    <p>Anla Courtis & Elko Bijweert, Ak’Chamel, W. Ravenveer, Mik Quantius, Bear Bones Lay Low, Bekkenbouwer, Bent von Bent, Weird Dust, Snobtrax, Pinchado, Jooklo Duo &gt;&gt;</p>
+                </div>
+            </div>
+
+            <!-- Nieuwe sectie voor de audioplayer en foto -->
+            <div class="audio-block">
+                <!-- Audio Player Block -->
+                <div class="audio-player">
+                    <iframe src="https://audiomack.com/embed/242hz/song/anlaelko" scrolling="no" frameborder="0" title="ANLA COURTIS & ELKO BLIJWEERT LIVE 24/01"></iframe>
+                </div>
+                <!-- Afbeelding Block onder "Past" -->
+                <div class="image">
+                    <img src="jdbb.png" alt="JDBB Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
