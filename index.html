@@ -16,12 +16,12 @@
         }
         .header {
             background: url('https://git242242.github.io/website/headerimage2.png') no-repeat center center;
-            background-size: cover; /* Zorgt ervoor dat de afbeelding altijd de volledige breedte en hoogte vult */
+            background-size: cover;
             height: 300px;
             width: 100%;
             position: relative;
-            margin: 0; /* Verwijdert de rand */
-            padding: 0; /* Verwijdert de padding */
+            margin: 0;
+            padding: 0;
         }
         .main-title {
             font-size: 5rem;
@@ -55,6 +55,25 @@
             width: 100px;
             margin: 10px;
         }
+        .audio-player {
+            background-color: #333; /* Maak de achtergrond donkerder voor het audio blok */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .audio-block {
+            display: flex;
+            align-items: center;
+        }
+        .audio-block .audio-player {
+            flex: 1; /* Zorg ervoor dat de audioplayer de meeste ruimte inneemt */
+            margin-right: 20px;
+        }
+        .audio-block .image {
+            width: 200px; /* Pas de breedte van de afbeelding aan */
+            height: auto;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -77,14 +96,20 @@
                 </div>
                 <div class="col-md-6 past">
                     <h2>PAST:</h2>
-                    <p>Anla Courtis, Elko Bijweert, Ak’Chamel, W. Ravenveer, Mik Quantius, Bear Bones Lay Low, Bekkenbouwer, Bent von Bent, Weird Dust, Snobtrax, Pinchado, Jooklo Duo, Amongst others &gt;&gt;</p>
+                    <p>Anla Courtis & Elko Bijweert, Ak’Chamel, W. Ravenveer, Mik Quantius, Bear Bones Lay Low, Bekkenbouwer, Bent von Bent, Weird Dust, Snobtrax, Pinchado, Jooklo Duo &gt;&gt;</p>
                 </div>
             </div>
             
-            <div class="mt-4">
-                <img src="event-poster.png" alt="Event Poster" class="event-image">
-                <img src="event-poster.png" alt="Event Poster" class="event-image">
-                <img src="event-poster.png" alt="Event Poster" class="event-image">
+            <!-- Nieuwe sectie voor de audioplayer en foto -->
+            <div class="audio-block">
+                <!-- Audio Player Block -->
+                <div class="audio-player">
+                    <iframe src="https://audiomack.com/embed/242hz/song/anlaelko" scrolling="no" width="100%" height="252" frameborder="0" title="ANLA COURTIS & ELKO BLIJWEERT LIVE 24/01"></iframe>
+                </div>
+                <!-- Afbeelding Block -->
+                <div class="image">
+                    <img src="your-image.jpg" alt="Your Image" class="img-fluid">
+                </div>
             </div>
         </div>
     </div>
