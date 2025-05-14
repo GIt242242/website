@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>242Hz</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#57b5e7',secondary:'#fce7eb'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+@keyframes gradient {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+body {
+min-height: 100vh;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+color: #333;
+line-height: 1.5;
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+}
+.title {
+font-size: 8rem;
+font-weight: 700;
+font-style: italic;
+line-height: 1;
+}
+</style>
+</head>
+<body class="p-12 text-white">
+<main class="max-w-7xl mx-auto">
+<div class="mb-8">
+<h1 class="title">242Hz</h1>
+<p class="text-xl mt-4">space for free form music and experimental sound/art</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 mt-16">
+<div class="space-y-12">
+<div class="flex gap-8">
+<div>
+<h2 class="text-2xl font-bold mb-6">Upcoming:</h2>
+<div class="space-y-2">
+<p>John Wiese</p>
+<p>Dylan Belgrado</p>
+<p>Kiara Govaert</p>
+<p>DJ Snobfrax</p>
+<p class="mt-6">FRIDAY MAY 23</p>
+<p>20h / 10 Euro</p>
+<a href="https://instagram.com/242hz" target="_blank" class="block mt-8 hover:opacity-70">read more</a>
+</div>
+</div>
+<div class="w-64">
+<img src="https://static.readdy.ai/image/6bc4d7a27ee546845dfc399d66cba39d/16e0267c669c9c47a12c8374ab840b36.jpeg" alt="Event poster" class="w-full h-auto">
+</div>
+</div>
+<div class="p-8">
+<h2 class="text-2xl font-bold mb-6">Contact Us</h2>
+<form id="contactForm" class="space-y-4" action="" method="POST">
+<div>
+<input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 rounded-button bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-white/40">
+</div>
+<div>
+<input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 rounded-button bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-white/40">
+</div>
+<div>
+<textarea name="message" placeholder="Your Message" required class="w-full px-4 py-2 rounded-button bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-white/40 h-32"></textarea>
+</div>
+<div class="flex items-center gap-4">
+<div id="captchaQuestion" class="text-lg"></div>
+<input type="number" id="captchaAnswer" name="captcha" required class="w-24 px-4 py-2 rounded-button bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-white/40">
+</div>
+<button type="submit" class="px-6 py-2 bg-white/20 hover:bg-white/30 transition rounded-button">Send Message</button>
+</form>
+</div>
+</div>
+<div>
+<h2 class="text-2xl font-bold mb-6">Past:</h2>
+<p>Evil Moisture, Liegenaar, W. Ravenveer, Last Action / systm takeover / Anla Courtis, Elko Blijweert / Jookloyd, DJ Fammi Vedere / Inne Eysermans, Sjoerd Leijten, Jo Caimo / Bear Bones Lay Low, Bent von Bent, Matthias Meersmans, Gypsy Flemming / Ak'chamel, Bekkenbouwer / Mik Quantius / Pinchado, Weird Dust</p>
+<a href="https://instagram.com/242hz" target="_blank" class="block mt-8 hover:opacity-70">read more</a>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+let num1 = Math.floor(Math.random() * 10) + 1;
+let num2 = Math.floor(Math.random() * 10) + 1;
+document.getElementById('captchaQuestion').textContent = `What is ${num1} + ${num2}?`;
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const answer = parseInt(document.getElementById('captchaAnswer').value);
+if (answer !== num1 + num2) {
+const notification = document.createElement('div');
+notification.className = 'fixed top-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg';
+notification.textContent = 'Incorrect captcha answer. Please try again.';
+document.body.appendChild(notification);
+setTimeout(() => notification.remove(), 3000);
+return;
+}
+const formData = new FormData(this);
+formData.append('to', 'radiozonderdak@gmail.com');
+const notification = document.createElement('div');
+notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg';
+notification.textContent = 'Message sent successfully!';
+document.body.appendChild(notification);
+setTimeout(() => notification.remove(), 3000);
+this.reset();
+num1 = Math.floor(Math.random() * 10) + 1;
+num2 = Math.floor(Math.random() * 10) + 1;
+document.getElementById('captchaQuestion').textContent = `What is ${num1} + ${num2}?`;
+});
+});
+</script>
+</main>
+</body>
+</html>
